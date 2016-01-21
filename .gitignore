@@ -1,3 +1,6 @@
+#bower_modules
+AngularDemoMain/bower_components/
+
 # Logs
 logs
 *.log

@@ -1,0 +1,24 @@
+"browser-sync": "^2.10.0",
+"gulp-changed": "^1.3.0",
+"gulp-notify": "^2.2.0",
+"karma-phantomjs-launcher": "^0.2.1",
+notify = require('gulp-notify'),
+changed = require('gulp-changed'),
+browserSync = require('browser-sync'),
+
+
+"gulp-rename": "^1.2.2",
+
+
+"gulp-jshint": "^2.0.0",
+"jshint": "^2.8.0",
+"jshint-stylish": "^2.1.0"
+
+gulp.task('usemin',['jshint'], function () {
+  return gulp.src('./app/*.html')
+      .pipe(usemin({
+        css:[minifycss(),rev()],
+        js: [ngannotate(),uglify(),rev()]
+      }))
+      .pipe(gulp.dest('dist/'));
+});

@@ -1,0 +1,1 @@
+karma run karma.conf.js
